@@ -8,7 +8,7 @@ A continuación se detallan los pasos que se desarrollaron para resolver el desa
 
 4. En ApiPredictions.ipynb se se construye de nuevo otra API utilizando un micro servivo de flask que a su vez invoca la primera API para obtener de ellas las features de entrenamiento dado un id, y con estos datos hacemos una predicción desde esta API.
 
-5. Se integró github con CML (Continuous Machine Learning), herramienta open-source utilizada para continuous integration & delivery (CI/CD) como parte del flujo de trabajo de MLOps. En el repositorio está oculto el archivo /.github/workflows/cnl.yaml que no es otra cosa que el script donde escribes comando cml para enriquecer daca commit y push, estas se visualizan en los Actions de github, como se ve en MlOps1.JPG, MlOps3.JPG y MlOps3.JPG. En requirements.txt están las bibliotecas que se requieren para completar la integración.
+5. Se integró github con CML (Continuous Machine Learning), herramienta open-source utilizada para continuous integration & delivery (CI/CD) como parte del flujo de trabajo de MLOps. En el repositorio está oculto el archivo /.github/workflows/cnl.yaml que no es otra cosa que el script donde escribes comando cml para enriquecer daca commit y push, estas se visualizan en los Actions de github, como se ve en MlOps1.JPG, MlOps3.JPG y MlOps3.JPG. En requirements.txt están las bibliotecas que se requieren para completar la integración. Se incorporó integration.sh para ejecutar la continuous integration & delivery (CI/CD) de forma autómatica vía comando de consola. 
 
 6. Cada vez que datapipeline.py se modifique y se lleva al repositorio via push se ejecuta el script de CML que te permite de forma adicional incorporar métricas y plots relacionadas con el Pipeline si hicieran falta incorpotrarlas.
 
